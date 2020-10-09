@@ -1,0 +1,114 @@
+@import "styles.css";
+
+
+body {
+  background-color: var(--color-4);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 0em;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  background-color: var(--color-4);
+}
+
+
+
+#titleblock{
+  display: block;
+z-index: 8;
+
+animation:load_up_title 5s forwards;
+-webkit-animation:load_up_title 5s forwards;
+/* margin: 100px auto 10px auto; */
+position: fixed;
+top: 100000px;
+left: 50px;
+animation-delay: 1s;
+}
+
+#titleheader{
+font-size: 60;
+z-index: 6;
+color: var(--accent-3);
+}
+
+#titleheader a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
+.frontimage{
+  position: fixed;
+  bottom:-1000px;
+  left: 0%;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+}
+
+#open1{
+  z-index: 10;
+  animation:load_up 1s forwards;
+-webkit-animation:load_up 1s forwards;
+}
+
+#open2{
+  z-index: 9;
+  animation-delay: 1s;
+  animation:load_up 2s forwards;
+-webkit-animation:load_up 2s forwards;
+}
+
+#open3{
+  z-index: 8;
+  animation-delay: 2s;
+  animation:load_up 3s forwards;
+-webkit-animation:load_up 3s forwards;
+}
+
+#open4{
+  z-index: 7;
+  animation-delay: 2s;
+  animation:load_up 4s forwards;
+-webkit-animation:load_up 4s forwards;
+}
+
+#open5{
+  z-index: 6;
+
+  animation:load_up 2s forwards;
+-webkit-animation:load_up 2s forwards;
+animation-delay: 1s;
+}
+
+
+
+@keyframes load_up{
+  from{bottom:-1000px;}
+  to{bottom:0px;}
+}
+
+@-webkit-keyframes load_up{
+  from{bottom:-1000px;}
+  to{bottom:0px;}
+}
+
+
+@keyframes load_up_title{
+  from{top:1000px;}
+  to{top:100px;}
+}
+
+@-webkit-keyframes load_up_title{
+  from{top:1000px;}
+  to{top:100px;}
+}
